@@ -1,4 +1,4 @@
-FROM circleci/android
+FROM circleci/android:api-29-node
 
 MAINTAINER julywind@126.com
 
