@@ -2,7 +2,10 @@ FROM circleci/android:api-29-node
 
 MAINTAINER julywind@126.com
 USER root
-RUN apt-get update \
-  && apt-get install -y gradle \
-  && apt-get clean
+cd /opt/
+RUN wget https://services.gradle.org/distributions/gradle-6.1.1-bin.zip ./ \
+  && unzip gradle-6.1.1-bin.zip \
+  && apt-get remove gradle \
+  && export PATH=$PATH:/opt/gradle-6.1.1/bin
+
 USER circleci
