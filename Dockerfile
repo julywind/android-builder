@@ -6,6 +6,6 @@ WORKDIR /opt
 
 RUN wget https://services.gradle.org/distributions/gradle-6.1.1-bin.zip
 RUN unzip gradle-6.1.1-bin.zip
-RUN export PATH=$PATH:/opt/gradle-6.1.1/bin
+ENV PATH=$PATH:/opt/gradle-6.1.1/bin
 
 USER circleci
