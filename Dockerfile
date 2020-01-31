@@ -9,7 +9,7 @@ WORKDIR /opt
 #  && export PATH=$PATH:/opt/gradle-6.1.1/bin
 
 RUN "wget https://services.gradle.org/distributions/gradle-6.1.1-bin.zip" \
-    && "unzip gradle-6.1.1-bin.zip" 
+    && "unzip gradle-6.1.1-bin.zip" \
     && "export PATH=$PATH:/opt/gradle-6.1.1/bin"
 #RUN export PATH=$PATH:/opt/gradle-6.1.1/bin
 
